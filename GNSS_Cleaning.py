@@ -2,6 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy import stats
 from statistics import stdev
+from GNSSCleaner_Class import GNSSCleaner
 
 """
 For some basic example data that reflects the nature of GNSS receiver.
@@ -36,45 +37,20 @@ ax.set_ylabel('Y')
 ax.set_zlabel('Z')
 plt.show()
 
-"""
-Request confidence interval from user.
-"""
+result = GNSSCleaner(X_raw, Y_raw, Z_raw, CI99=True)
+x_out, y_out, z_out = (result.clean())
 
 
-def clean(x_raw, y_raw, z_raw):
-    z_x = list(stats.zscore(x_raw))
-    z_y = list(stats.zscore(y_raw))
-    z_z = list(stats.zscore(z_raw))
-
-    x, y, z = [], [], []
-
-    for i in range(len(z_x)):
-        if 1 > z_x[i] > -1:
-            if 1 > z_y[i] > -1:
-                if 1 > z_z[i] > -1:
-                    x.append(x_raw[i]), y.append(y_raw[i]), z.append(z_raw[i])
-        else:
-            x.append(None), y.append(None), z.append(None)
-
-    x_c, y_c, z_c = [], [], []
-
-    for i in x:
-        if x != None:
-            x_c.append(i)
-
-    for i in y:
-        if y != None:
-            y_c.append(i)
-
-    for i in z:
-        if z != None:
-            z_c.append(i)
-
-    print(len(x_raw) - len(x_c), " values removed")
-
-    return x_c, y_c, z_c
-
-
-x, y, z = (clean(X_raw, Y_raw, Z_raw))
-
+# Standard deviation = SD of X x Y x Z (Plotting)
+X_sd, Y_sd, Z_sd = stdev(x_out), stdev(y_out), stdev(z_out)
+sd = X_sd * Y_sd * Z_sd
+fig = plt.figure()
+ax = fig.add_subplot(111, projection='3d')
+ax.grid(False)
+ax.scatter(x_out, y_out, z_out, color="skyblue")
+ax.scatter(np.average(x_out), np.average(y_out), np.average(z_out), color="salmon", s=sd)
+ax.set_xlabel('X')
+ax.set_ylabel('Y')
+ax.set_zlabel('Z')
+plt.show()
 
