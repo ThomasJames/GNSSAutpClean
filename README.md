@@ -10,6 +10,8 @@ Some sample generator is generated [here](https://github.com/ThomasJames/GNSS_Cl
 
 The class performing the computations is [here](https://github.com/ThomasJames/GNSS_Cleaning_3D/blob/master/GNSSCleaner_Class.py)
 
+Confidence levels. 95%, 98% and 99% are potential defaults. 
+
 ### Libraries needed
 
 ``` 
