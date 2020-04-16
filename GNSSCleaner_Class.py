@@ -30,9 +30,9 @@ class GNSSCleaner:
         x, y, z = [], [], []
 
         for i in range(len(z_x)):
-            if 2.5 > z_x[i] > -2.5:
-                if 2.5 > z_y[i] > -2.5:
-                    if 2.5 > z_z[i] > -2.5:
+            if self.ci > z_x[i] > -self.ci:
+                if self.ci > z_y[i] > -self.ci:
+                    if self.ci > z_z[i] > -self.ci:
                         x.append(self.x_raw[i]), y.append(self.y_raw[i]), z.append(self.z_raw[i])
             else:
                 x.append(None), y.append(None), z.append(None)

@@ -25,12 +25,3 @@ for i in range(500):
 X_sd, Y_sd, Z_sd = stdev(X_raw), stdev(Y_raw), stdev(Z_raw)
 sd = X_sd * Y_sd * Z_sd
 
-fig = plt.figure()
-ax = fig.add_subplot(111, projection='3d')
-ax.grid(False)
-ax.scatter(X_raw, Y_raw, Z_raw, color="skyblue")
-ax.scatter(np.average(X_raw), np.average(Y_raw), np.average(Z_raw), color="salmon", s=sd)
-ax.set_xlabel('X')
-ax.set_ylabel('Y')
-ax.set_zlabel('Z')
-plt.show()
