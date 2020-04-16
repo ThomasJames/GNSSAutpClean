@@ -7,7 +7,7 @@ This program aims to statistically remove the gross errors.
 This code has applicatons outside survey. 
 
 ### Visualised
-<img src="https://github.com/ThomasJames/GNSS_Cleaning_3D/blob/master/Raw%20Data.png" width="250"> <img src="https://github.com/ThomasJames/GNSS_Cleaning_3D/blob/master/First%20Iteration.png" width="250"> <img src="https://github.com/ThomasJames/GNSS_Cleaning_3D/blob/master/Second%20Iteration.png" width="250">
+<img src="https://github.com/ThomasJames/GNSS_Cleaning_3D/blob/master/Raw%20Data.png" width="280"> <img src="https://github.com/ThomasJames/GNSS_Cleaning_3D/blob/master/First%20Iteration.png" width="280"> <img src="https://github.com/ThomasJames/GNSS_Cleaning_3D/blob/master/Second%20Iteration.png" width="280">
 
 
 
