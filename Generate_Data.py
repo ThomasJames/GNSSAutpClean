@@ -7,7 +7,6 @@ from statistics import stdev
 """
 For some basic example data that reflects the nature of GNSS receiver.
 The X, Y and Z coordinates are derived using a random normal function on python. 
-generator through the numpy library.
 """
 
 X_raw = [None] * 500
