@@ -66,6 +66,7 @@ if __name__=="__main__":
     sns.distplot(x_out, hist=False, color="salmon")
     sns.distplot(y_out, hist=False, color="skyblue" )
     sns.distplot(z_out, hist=False, color="grey")
+    plt.legend()
     plt.savefig(str(title) + " distribution.png")
     plt.show()
 
