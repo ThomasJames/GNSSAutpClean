@@ -22,6 +22,9 @@ pip install scipy
 ```
 
 ### Visualised
+
+Eg: A GNSS Reciever is placed at 10m North, 10m East and a height of 10m. 
+
 <img src="https://github.com/ThomasJames/GNSS_Cleaning_3D/blob/master/Plots/Raw%20Data.png" width="280"> <img src="https://github.com/ThomasJames/GNSS_Cleaning_3D/blob/master/Plots/First%20Iteration.png" width="280"> <img src="https://github.com/ThomasJames/GNSS_Cleaning_3D/blob/master/Plots/Second%20Iteration.png" width="280">
 
 <img src="https://github.com/ThomasJames/GNSS_Cleaning_3D/blob/master/Plots/Raw%20DataZ-Scores.png" width="280"> <img src="https://github.com/ThomasJames/GNSS_Cleaning_3D/blob/master/Plots/First%20IterationZ-Scores.png" width="280"> <img src="https://github.com/ThomasJames/GNSS_Cleaning_3D/blob/master/Plots/Second%20IterationZ-Scores.png" width="280">
