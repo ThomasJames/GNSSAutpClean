@@ -1,7 +1,7 @@
 # Statistical treatment of GNSS data
 
 GNSS recievers are used to establish geospatial coordinates. The [X, Y, Z] ouput will always contain gross and random errors.
-This program aims to statistically remove the gross errors. 
+The purpose of this program is to remove the gross errors using Z-Scores. 
 [This](https://ieeexplore.ieee.org/abstract/document/7063664/) book is great for information about GNSS (and multisensor intergration).
 
 Some sample generator is generated [here](https://github.com/ThomasJames/GNSS_Cleaning_3D/blob/master/Generate_Data.py)
